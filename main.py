@@ -6,7 +6,7 @@ from typing import Dict, Any, List
 import pandas as pd
 
 # Import the law assistant
-from agentic_rag_law_assistant import AgenticRAGLawAssistant, SearchResult
+from agentic_rag import AgenticRAGLawAssistant, SearchResult
 
 # Page configuration
 st.set_page_config(
@@ -20,7 +20,7 @@ st.set_page_config(
 st.markdown("""
 <style>
 .stApp {
-    background-color: #f8f9fa;
+    background-color: gray-600;
 }
 .main-header {
     background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
@@ -32,6 +32,7 @@ st.markdown("""
 }
 .chat-message {
     padding: 1rem;
+    color:black;
     border-radius: 10px;
     margin-bottom: 1rem;
     border-left: 4px solid #2a5298;
@@ -39,16 +40,19 @@ st.markdown("""
 .user-message {
     background-color: #e3f2fd;
     border-left-color: #1976d2;
+    color:black;
 }
 .assistant-message {
     background-color: #f3e5f5;
     border-left-color: #7b1fa2;
+    color:black;
 }
 .source-box {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 1rem;
+    color:black;
     margin: 0.5rem 0;
 }
 .doc-box {
@@ -59,6 +63,7 @@ st.markdown("""
     margin: 0.5rem 0;
     max-height: 200px;
     overflow-y: auto;
+    color:black;
 }
 .metric-box {
     background-color: white;
@@ -66,6 +71,7 @@ st.markdown("""
     border-radius: 8px;
     border: 1px solid #e0e0e0;
     text-align: center;
+    color:black;
 }
 </style>
 """, unsafe_allow_html=True)
